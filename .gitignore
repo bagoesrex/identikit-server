@@ -14,7 +14,6 @@ yarn-error.log*
 
 # dotenv environment variables
 .env
-.env.*
 
 # Prisma generated client
 prisma/dev.db
@@ -36,3 +35,5 @@ coverage/
 
 # Optional: if using PM2 or other process manager
 pids/
+
+/src/generated/prisma
