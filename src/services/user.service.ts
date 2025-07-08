@@ -8,7 +8,7 @@ export const getAllUsers = async () => {
     return prisma.user.findMany()
 }
 
-export const udpateUser = async (id: number, data: any) => {
+export const updateUser = async (id: number, data: any) => {
     return prisma.user.update({ where: { id }, data })
 }
 
