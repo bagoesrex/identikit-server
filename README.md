@@ -1,4 +1,4 @@
-# User API (To-Do's)
+# IdentiKit – User Management API
 
 ## Create User
 
