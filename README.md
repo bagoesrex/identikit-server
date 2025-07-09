@@ -23,14 +23,20 @@ API backend untuk pengelolaan data pengguna (User Management) berbasis **Node.js
 
 ## 🛠️ Panduan Instalasi
 
-1. Clone repository:
+1. **Clone repository**:
 
 ```bash
  git clone https://github.com/bagoesrex/identikit-server.git
  cd identikit-server
 ```
 
-2. Salin konfigurasi environment:
+2. **Install dependencies:**
+
+```bash
+npm install
+```
+
+3. **Salin konfigurasi environment**:
 
 ```bash
 cp .env.example .env
@@ -46,19 +52,19 @@ PORT=5000
 Format URL MySQL:
 `mysql://<username>:<password>@<host>:<port>/<database>`
 
-3. Generate Prisma Client:
+4. **Generate Prisma Client**:
 
 ```bash
 npm run prisma:generate
 ```
 
-4. Migrasi Database
+5. **Migrasi Database:**
 
 ```bash
 prisma migrate dev
 ```
 
-5. Jalankan server lokal:
+6. **Jalankan server lokal:**
 
 ```bash
 npm run dev
