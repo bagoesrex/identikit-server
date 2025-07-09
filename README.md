@@ -1,8 +1,84 @@
-# IdentiKit – User Management API
+# 🧩 IdentiKit – User Management API
 
-## Create User
+API backend untuk pengelolaan data pengguna (User Management) berbasis **Node.js**, **TypeScript**, dan **Prisma ORM**. API ini memungkinkan Anda untuk melakukan operasi **CRUD** (Create, Read, Update, Delete) terhadap data pengguna.
 
-Endpoint : POST /api/users
+---
+
+## ✨ Fitur Utama
+
+- ✅ CRUD User: Tambah, ambil, edit, dan hapus data pengguna
+- ✅ Validasi data dan pesan error yang jelas
+- ✅ Terintegrasi dengan Prisma ORM dan database MySQL
+- ✅ Arsitektur modular & clean code
+- ✅ Siap untuk pengembangan frontend dengan REST API standar
+
+---
+
+## 📋 Requirements
+
+- Node.js ≥ 18
+- MySQL
+
+---
+
+## 🛠️ Panduan Instalasi
+
+1. **Clone repository**:
+
+```bash
+ git clone https://github.com/bagoesrex/identikit-server.git
+ cd identikit-server
+```
+
+2. **Install dependencies:**
+
+```bash
+npm install
+```
+
+3. **Salin konfigurasi environment**:
+
+```bash
+cp .env.example .env
+```
+
+Sesuaikan nilai `DATABASE_URL` dan `PORT` di file `.env`:
+
+```bash
+DATABASE_URL="mysql://root:@localhost:3306/identikit_db"
+PORT=5000
+```
+
+Format URL MySQL:
+`mysql://<username>:<password>@<host>:<port>/<database>`
+
+4. **Generate Prisma Client**:
+
+```bash
+npm run prisma:generate
+```
+
+5. **Migrasi Database:**
+
+```bash
+prisma migrate dev
+```
+
+6. **Jalankan server lokal:**
+
+```bash
+npm run dev
+```
+
+Server akan berjalan di: `http://localhost:5000`
+
+---
+
+# 📡 Endpoint API
+
+## 🔹 Create User
+
+POST `/api/users`
 
 Request Body :
 
@@ -46,9 +122,9 @@ Response Body (Failed) :
 }
 ```
 
-## Get All Users
+## 🔹 Get All Users
 
-Endpoint : GET /api/users
+GET `/api/users`
 
 Response Body (Success) :
 
@@ -91,9 +167,9 @@ Response Body (Failed) :
 }
 ```
 
-## Update User
+## 🔹 Update User
 
-Endpoint : PUT /api/users/:id
+PUT `/api/users/:id`
 
 Request Body :
 
@@ -137,9 +213,9 @@ Response Body (Failed) :
 }
 ```
 
-## Delete User
+## 🔹 Delete User
 
-Endpoint : DELETE /api/users/:id
+DELETE `/api/users/:id`
 
 Response Body (Success) :
 
